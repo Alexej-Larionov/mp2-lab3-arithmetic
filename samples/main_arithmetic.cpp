@@ -12,7 +12,7 @@ int main()
 {
 	while (cin) {
 		try {
-			cout << "Please insert your espression:";
+			cout << "Please insert your expression:";
 			string str = getNewString();
 
 			Lexems arithmeticExp = convertToArrayLexem(str);

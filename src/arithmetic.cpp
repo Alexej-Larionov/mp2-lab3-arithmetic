@@ -1,7 +1,7 @@
 // реализация функций и классов для вычисления арифметических выражений
 #include "../include/arithmetic.h"
 
-map<string, double> variables;
+//map<string, double> variables;
 
 bool isDot(const char& ch)
 {
@@ -96,6 +96,7 @@ double stringToDouble(string str, size_t* pos)
 
 Lexems convertToArrayLexem(string str)
 {
+	map<string, double> variables;
 	Lexems lexemsArray;
 	size_t length = str.length();
 
@@ -261,10 +262,10 @@ bool isCorrect(const Lexems& lexemsArray)
 		if (isOperation(curr) && (next == RP)) {
 			throw Exception("')' cannot be after operation");
 		}
-		else if (isOperation(curr) && isOperation(next))
+		/*else if (isOperation(curr) && isOperation(next))
 		{
 			throw Exception("operation cannot be after operation");
-		}
+		}*/
 
 		if ((curr == RP) && ((next != RP) && !isOperation(next)))
 		{
