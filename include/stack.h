@@ -34,7 +34,7 @@ private:
 	ValType* data;
 	int top_;
 	int maxSize_;
-
+	bool isFull();
 public:
 
 	TStack(int maxSize);
@@ -42,7 +42,7 @@ public:
 	TStack(const TStack& s);
 	~TStack();
 
-	bool isFull();
+	
 	bool isEmpty();
 
 	void push(const ValType& v);
